@@ -16,11 +16,6 @@ public class Parser {
     }
 
     public JSONDataType parse() {
-//        List<JSONDataType> parseResult = new ArrayList<>();
-//        while (!isAtEnd()) {
-//            parseResult.add(value());
-//        }
-//        return parseResult;
         return value();
     }
 

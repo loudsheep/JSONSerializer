@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) throws IOException {
-        String content = Files.readString(Path.of("testData2.json"));
+        String content = Files.readString(Path.of("testData3.json"));
 //        System.out.println(content);
 
         List<Token> list;
