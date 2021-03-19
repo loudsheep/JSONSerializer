@@ -3,25 +3,25 @@ package json.dataTypes;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class JSONDataType {
+public abstract class JSONData {
     protected String name;
-    protected List<JSONDataType> children = new ArrayList<>();
+    protected List<JSONData> children = new ArrayList<>();
     protected int childrenCount = 0;
 
-    public final void addChildren(JSONDataType dataType) {
+    public final void addChildren(JSONData dataType) {
         children.add(dataType);
         childrenCount++;
     }
 
-    public final void removeChildren(JSONDataType dataType) {
+    public final void removeChildren(JSONData dataType) {
         if (children.contains(dataType)) {
             children.remove(dataType);
             childrenCount--;
         }
     }
 
-    public final JSONDataType get(String path) {
-        JSONDataType result = null;
+    public final JSONData get(String path) {
+        JSONData result = null;
         String[] arr = path.split("\\.");
 
         if (arr.length == 0) {
@@ -50,7 +50,7 @@ public abstract class JSONDataType {
         }
 
         if (arr.length == 1) {
-            for (JSONDataType data : children) {
+            for (JSONData data : children) {
                 if (data.name.equals(arr[0])) {
                     return data.request(childPath);
                 }
@@ -58,7 +58,7 @@ public abstract class JSONDataType {
             return null;
         }
 
-        for (JSONDataType data : children) {
+        for (JSONData data : children) {
             if (data.name.equals(arr[0])) {
                 result = data.request(childPath);
             }
@@ -66,8 +66,8 @@ public abstract class JSONDataType {
         return result;
     }
 
-    protected JSONDataType request(String[] path) {
-        JSONDataType result = null;
+    protected JSONData request(String[] path) {
+        JSONData result = null;
 
         if (path.length == 0) {
             return this;
@@ -96,7 +96,7 @@ public abstract class JSONDataType {
         }
 
         if (path.length == 1) {
-            for (JSONDataType data : children) {
+            for (JSONData data : children) {
                 if (data.name.equals(path[0])) {
                     return data.request(childPath);
                 }
@@ -104,7 +104,7 @@ public abstract class JSONDataType {
             return null;
         }
 
-        for (JSONDataType data : children) {
+        for (JSONData data : children) {
             if (data.name.equals(path[0])) {
                 result = data.request(childPath);
             }

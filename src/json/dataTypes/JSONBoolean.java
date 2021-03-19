@@ -1,6 +1,6 @@
 package json.dataTypes;
 
-public class JSONBoolean extends JSONDataType {
+public class JSONBoolean extends JSONData {
     boolean value;
 
     public JSONBoolean(String name, boolean value) {

@@ -1,7 +1,9 @@
+package test;
+
 import json.Parser;
 import json.Scanner;
 import json.Token;
-import json.dataTypes.JSONDataType;
+import json.dataTypes.JSONData;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,7 +26,7 @@ public class Test {
 //        }
 
         Parser p = new Parser(list);
-        JSONDataType parse = p.parse();
+        JSONData parse = p.parse();
 //        System.out.println(parse);
 //        System.out.println(parse.get("Deaths").getData());
 

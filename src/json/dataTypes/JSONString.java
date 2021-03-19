@@ -1,6 +1,6 @@
 package json.dataTypes;
 
-public class JSONString extends JSONDataType {
+public class JSONString extends JSONData {
     String value;
 
     public JSONString(String name, String value) {

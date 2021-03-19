@@ -1,6 +1,6 @@
 package json.dataTypes;
 
-public class JSONNull extends JSONDataType {
+public class JSONNull extends JSONData {
     public JSONNull(String name) {
         this.name = name;
     }

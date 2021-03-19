@@ -2,8 +2,8 @@ package json.dataTypes;
 
 import java.util.List;
 
-public class JSONArray extends JSONDataType {
-    public JSONArray(String name, List<JSONDataType> elements) {
+public class JSONArray extends JSONData {
+    public JSONArray(String name, List<JSONData> elements) {
         this.name = name;
         this.children = elements;
         this.childrenCount = elements.size();

@@ -2,8 +2,8 @@ package json.dataTypes;
 
 import java.util.List;
 
-public class JSONObject extends JSONDataType {
-    public JSONObject(String name, List<JSONDataType> elements) {
+public class JSONObject extends JSONData {
+    public JSONObject(String name, List<JSONData> elements) {
         this.name = name;
         this.children = elements;
     }

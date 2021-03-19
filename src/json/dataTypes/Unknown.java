@@ -1,6 +1,6 @@
 package json.dataTypes;
 
-public class Unknown extends JSONDataType {
+public class Unknown extends JSONData {
     public Unknown() {
 
     }

@@ -14,11 +14,11 @@ public class Parser {
         this.tokens = tokens;
     }
 
-    public JSONDataType parse() {
+    public JSONData parse() {
         return value();
     }
 
-    private JSONDataType value() {
+    private JSONData value() {
         Token type = advance();
         if (type.type == STRING) {
             if (peek().type == COLON) {
