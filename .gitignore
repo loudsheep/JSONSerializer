@@ -1,0 +1,4 @@
+.idea/
+JSONSerializer.iml
+out/
+testData*.json
