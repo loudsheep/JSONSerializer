@@ -1,4 +1,4 @@
-package test.dataTypes;
+package json.dataTypes;
 
 public class JSONString extends JSONDataType {
     String value;

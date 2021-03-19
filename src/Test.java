@@ -1,7 +1,7 @@
-import test.Parser;
-import test.Scanner;
-import test.Token;
-import test.dataTypes.JSONDataType;
+import json.Parser;
+import json.Scanner;
+import json.Token;
+import json.dataTypes.JSONDataType;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) throws IOException {
-        String content = Files.readString(Path.of("testData3.json"));
+        String content = Files.readString(Path.of("testData6.json"));
 //        System.out.println(content);
 
         List<Token> list;
@@ -32,7 +32,7 @@ public class Test {
         while (true) {
             System.out.print(">>> ");
             String str = reader.readLine();
-            System.out.println(str);
+//            System.out.println(str);
             System.out.println(parse.get(str).getData());
         }
     }

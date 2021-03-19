@@ -1,4 +1,4 @@
-package test.dataTypes;
+package json.dataTypes;
 
 import java.util.List;
 

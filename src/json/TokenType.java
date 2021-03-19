@@ -1,4 +1,4 @@
-package test;
+package json;
 
 public enum TokenType {
     LEFT_BRACE, RIGHT_BRACE, LEFT_SQUARE_BRACKET, RIGHT_SQUARE_BRACKET,

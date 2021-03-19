@@ -1,4 +1,4 @@
-package test.dataTypes;
+package json.dataTypes;
 
 public class Unknown extends JSONDataType {
     public Unknown() {

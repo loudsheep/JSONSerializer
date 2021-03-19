@@ -1,4 +1,4 @@
-package test;
+package json;
 
 public class Token {
     TokenType type;

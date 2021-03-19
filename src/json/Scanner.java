@@ -1,11 +1,11 @@
-package test;
+package json;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static test.TokenType.*;
+import static json.TokenType.*;
 
 public class Scanner {
 

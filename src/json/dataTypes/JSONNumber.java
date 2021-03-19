@@ -1,9 +1,9 @@
-package test.dataTypes;
+package json.dataTypes;
 
-public class JSONBoolean extends JSONDataType {
-    boolean value;
+public class JSONNumber extends JSONDataType {
+    float value;
 
-    public JSONBoolean(String name, boolean value) {
+    public JSONNumber(String name, float value) {
         this.name = name;
         this.value = value;
     }
@@ -15,7 +15,7 @@ public class JSONBoolean extends JSONDataType {
 
     @Override
     public String toString() {
-        return "JSON Boolean name=" + name + " value=" + value;
+        return "JSON Number name=" + name + " value=" + value;
     }
 
     @Override

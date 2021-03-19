@@ -1,11 +1,10 @@
-package test;
+package json;
 
-import test.dataTypes.*;
+import json.dataTypes.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static test.TokenType.*;
+import static json.TokenType.*;
 
 public class Parser {
     private List<Token> tokens;
@@ -30,9 +29,9 @@ public class Parser {
                 } else if (token.type == STRING) {
                     return new JSONString(type.literal.toString(), token.literal.toString());
                 } else if (token.type == TRUE) {
-                    return new JSONBoolean(type.literal.toString(), false);
-                } else if (token.type == FALSE) {
                     return new JSONBoolean(type.literal.toString(), true);
+                } else if (token.type == FALSE) {
+                    return new JSONBoolean(type.literal.toString(), false);
                 } else if (token.type == NULL) {
                     return new JSONNull(type.literal.toString());
                 } else if (token.type == LEFT_BRACE) {
@@ -46,9 +45,9 @@ public class Parser {
         } else if (type.type == NUMBER) {
             return new JSONNumber(type.literal.toString(), Float.parseFloat(type.literal.toString()));
         } else if (type.type == TRUE) {
-            return new JSONBoolean(type.literal.toString(), false);
-        } else if (type.type == FALSE) {
             return new JSONBoolean(type.literal.toString(), true);
+        } else if (type.type == FALSE) {
+            return new JSONBoolean(type.literal.toString(), false);
         } else if (type.type == NULL) {
             return new JSONNull(type.literal.toString());
         } else if (type.type == LEFT_BRACE) {

@@ -1,6 +1,4 @@
-package test.dataTypes;
-
-import test.Parser;
+package json.dataTypes;
 
 import java.util.List;
 

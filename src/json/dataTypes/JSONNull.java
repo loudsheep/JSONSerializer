@@ -1,4 +1,4 @@
-package test.dataTypes;
+package json.dataTypes;
 
 public class JSONNull extends JSONDataType {
     public JSONNull(String name) {
