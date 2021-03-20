@@ -14,10 +14,6 @@ public class JSONArray extends JSONData {
         this.childrenCount = 0;
     }
 
-    public int length() {
-        return childrenCount;
-    }
-
     @Override
     public Object getData() {
         return children;

@@ -20,6 +20,11 @@ public abstract class JSONData {
         }
     }
 
+    public final int length() {
+        childrenCount = children.size();
+        return children.size();
+    }
+
     public final JSONData get(String path) {
         JSONData result = null;
         String[] arr = path.split("\\.");
