@@ -3,3 +3,4 @@ JSONSerializer.iml
 out/
 testData*.json
 src/test/
+readme.md

@@ -33,7 +33,6 @@ public class JSONObject extends JSONData {
 
     @Override
     public String repr() {
-//        return "json.Object\"" + name + "\"";
         return toString();
     }
 }

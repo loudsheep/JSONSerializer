@@ -62,8 +62,13 @@ public class Parser {
     }
 
     private JSONObject objectDeclaration(Token name) {
-        Token type;
+        Token type = peek();
         JSONObject jsonObject = new JSONObject(name.literal.toString());
+
+        if (type.type == RIGHT_BRACE) { // empty object
+            advance();
+            return jsonObject;
+        }
 
         do {
             jsonObject.addChildren(value());
@@ -73,13 +78,19 @@ public class Parser {
     }
 
     private JSONArray arrayDeclaration(Token name) {
-        Token type;
+        Token type = peek();
         JSONArray jsonArray = new JSONArray(name.literal.toString());
+
+        if (type.type == RIGHT_SQUARE_BRACKET) { // empty array
+            advance();
+            return jsonArray;
+        }
 
         do {
             jsonArray.addChildren(value());
             type = advance();
         } while (type.type != RIGHT_SQUARE_BRACKET);
+
         return jsonArray;
     }
 

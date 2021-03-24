@@ -2,12 +2,12 @@ package json.dataTypes;
 
 public class Unknown extends JSONData {
     public Unknown() {
-
+        name = "unknown";
     }
 
     @Override
     public Object getData() {
-        return null;
+        return "unknown";
     }
 
     @Override
