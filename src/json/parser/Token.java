@@ -1,4 +1,4 @@
-package json;
+package json.parser;
 
 public class Token {
     TokenType type;

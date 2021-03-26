@@ -1,8 +1,8 @@
 package test;
 
-import json.Parser;
-import json.Scanner;
-import json.Token;
+import json.parser.Parser;
+import json.parser.Scanner;
+import json.parser.Token;
 import json.dataTypes.JSONData;
 
 import java.io.BufferedReader;

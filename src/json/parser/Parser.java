@@ -1,10 +1,10 @@
-package json;
+package json.parser;
 
 import json.dataTypes.*;
 
 import java.util.List;
 
-import static json.TokenType.*;
+import static json.parser.TokenType.*;
 
 public class Parser {
     private List<Token> tokens;
