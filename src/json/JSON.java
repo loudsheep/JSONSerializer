@@ -12,4 +12,8 @@ public class JSON {
     public static JSONData parse(String text) {
         return new Parser(new Scanner(text).scanTokens()).parse();
     }
+
+    public String serialize(Object data) {
+        return "";
+    }
 }

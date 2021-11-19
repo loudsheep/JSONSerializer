@@ -14,7 +14,7 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) throws IOException {
-        String content = Files.readString(Path.of("testData6.json"));
+        String content = Files.readString(Path.of("testData.json"));
 //        System.out.println(content);
 
         List<Token> list;
